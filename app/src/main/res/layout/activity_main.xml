@@ -8,6 +8,16 @@
     android:background="#000000"
     >
 
+    <com.victor.loading.rotate.RotateLoading
+        android:id="@+id/circleProgress"
+        app:loading_width="5dp"
+        app:loading_color="@color/colorAccent"
+        tools:visibility="visible"
+        android:layout_centerInParent="true"
+        android:translationZ="2dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        />
 
     <ImageView
         android:id="@+id/logo"
@@ -28,7 +38,7 @@
 
     <WebView
         android:id="@+id/webview"
-        android:layout_width="399dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent" >
     </WebView>
 
