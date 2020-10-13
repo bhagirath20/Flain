@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -51,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
         webview.loadUrl("https://www.theflain.com/");
         WebSettings webSettings=webview.getSettings();
         webSettings.setJavaScriptEnabled(true);
+        webview.setWebChromeClient(new WebChromeClient());
+        webSettings.setDomStorageEnabled(true);
 
         //other code try to solve whatsapp error
         // setwebviewclient  (new WebViewClient to  mywebClient )
